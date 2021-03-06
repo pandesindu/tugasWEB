@@ -28,9 +28,9 @@
     </div>
     
     <div class="form-group">
-      <label class="control-label col-sm-2">NIK:</label>
+      <label class="control-label col-sm-2">Username:</label>
       <div class="col-sm-10">
-        <input type="number" class="form-control" id="nik" placeholder="Masukan NIK" name="nik">
+        <input type="number" class="form-control" id="username" placeholder="Masukan username" name="username">
       </div>
     </div>
     
@@ -43,27 +43,11 @@
     </div>
 
     <div class="form-group">
-                <label class="control-label col-sm-2" for="agama_mhs">Agama :</label>
+                <label class="control-label col-sm-2" for="jenis_kelamin">Jenis Kelamin :</label>
                 <div class="col-sm-10"><select id="agama_mhs" class="form-control select2" style="width: 100%;">
                     <option value="-" selected="selected">none</option>
-                    <option value="muslim">Muslim</option>
-                    <option value="kristen">Kristen</option>
-                    <option value="hindu">Hindu</option>
-                    <option value="budha">Budha</option>
-                    <option value="konghucu">Konghucu</option>
-                    <option value="lainnya">Lainnya</option>
-                </select>
-                </div>
-     </div>
-
-     <div class="form-group">
-                <label class="control-label col-sm-2" for="agama_mhs">Pekerjaan :</label>
-                <div class="col-sm-10"><select id="pekerjaan" class="form-control select2" style="width: 100%;">
-                    <option value="-" selected="selected">none</option>
-                    <option value="pns">PNS</option>
-                    <option value="wirausha">Wirausaha</option>
-                    <option value="mahasiswa">Mahasiswa</option>
-                    <option value="petani">Petani</option>
+                    <option value="muslim">Laki - Laki</option>
+                    <option value="kristen">Perempuan</option>
                     <option value="lainnya">Lainnya</option>
                 </select>
                 </div>
@@ -114,7 +98,7 @@
     $('h2').css('text-align', 'center');
     $('h2').css('text-transform', 'uppercase');
     $('h2').css('font-weight', 'bold');
-
+    $('.errmsg').css('text-align', 'center');
 
       $(".form-horizontal ").submit(function() {
       var ps1 = $('#pwd').val();
@@ -129,7 +113,7 @@
         if (valid == 0) {
            event.preventDefault();
         } else {
-            $('p').html("Selamat pendaftaran  " + $('input[name="nama "]').val() + " telah berhasil ");
+            $('p').html("Selamat pendaftaran  " + $('input[name="nama"]').val() + " telah berhasil ");
          }
       });
   });
